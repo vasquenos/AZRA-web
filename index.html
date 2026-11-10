@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AZRA — Yeni Nesil Moda</title>
+<meta name="description" content="AZRA: pembe, siyah ve beyazın gücüyle yeni nesil giyim mağazası.">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/data.js"></script><script defer src="js/app.js"></script><script defer src="js/pages.js"></script>
+</head>
+<body data-page="home">
+<main>
+<!-- HERO -->
+<section class="hero"><div class="wrap">
+ <div class="hero-grid">
+  <div>
+   <span class="eyebrow rv">Sonbahar / Kış 2026</span>
+   <h1 style="margin-top:18px"><span class="mask"><span>Stilini</span></span><span class="mask" style="--d:.12s"><span><span class="serif">yeniden</span></span></span><span class="mask" style="--d:.24s"><span>yaz<span class="pink">.</span></span></span></h1>
+   <p class="lead rv" style="--d:.4s">Pembenin cesareti, siyahın zarafeti, beyazın sadeliği. Sana özel yeni nesil koleksiyon artık yayında.</p>
+   <div class="cta rv" style="--d:.5s"><a class="btn" href="products.html?f=new">Koleksiyonu Keşfet →</a><a class="btn ghost" href="products.html?f=sale">İndirimler</a></div>
+   <div class="hero-stats rv" style="--d:.6s"><div><b data-count="48000" data-suf="+">0</b><span>Mutlu müşteri</span></div><div><b data-count="1200" data-suf="+">0</b><span>Özgün ürün</span></div><div><b>4.8★</b><span>Ortalama puan</span></div></div>
+  </div>
+  <div class="hero-vis rv z">
+   <div class="blob" data-speed=".08" style="width:260px;height:260px;background:var(--soft);left:-6%;bottom:-4%"></div>
+   <div class="hv-main" data-speed=".04" id="hv-main"></div>
+   <div class="hv-card hv-1" data-speed=".12"><div class="im" id="hv1"></div><small>Oversize Blazer</small></div>
+   <div class="hv-card hv-2" data-speed="-.08"><div class="im" id="hv2"></div><small>Platform Sneaker</small></div>
+   <div class="spinwrap" data-speed=".1"><svg class="spin" viewBox="0 0 130 130"><defs><path id="cp" d="M65 65m-48 0a48 48 0 1 1 96 0a48 48 0 1 1-96 0"/></defs><text><textPath href="#cp">YENİ SEZON • YENİ SEN • YENİ SEZON •</textPath></text></svg></div>
+  </div>
+ </div>
+</div><div class="bgword" data-speed="-.05">azra</div></section>
+
+<div class="band"><div class="mq"><span>ÜCRETSİZ KARGO</span><span class="serif">♥</span><span>30 GÜN İADE</span><span class="serif">♥</span><span>YENİ SEZON</span><span class="serif">♥</span><span>%15 HOŞ GELDİN</span><span class="serif">♥</span><span>ÜCRETSİZ KARGO</span><span class="serif">♥</span><span>30 GÜN İADE</span><span class="serif">♥</span><span>YENİ SEZON</span><span class="serif">♥</span><span>%15 HOŞ GELDİN</span><span class="serif">♥</span></div></div>
+
+<!-- KATEGORİLER -->
+<section class="sec"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow rv">Kategoriler</span><h2 class="title rv">Sana göre <span class="serif pink">bir şey</span> var</h2></div><a class="btn ghost rv" href="products.html">Tüm ürünler →</a></div>
+ <div class="cats" id="cats"></div>
+</div></section>
+
+<!-- POPÜLER ÜRÜNLER: yatay kaydırmalı vitrin -->
+<section class="hs"><div class="hs-pin">
+ <div class="hs-head"><span class="eyebrow">Popüler Ürünler</span><div class="sec-head" style="margin:10px 0 0"><h2 class="title" style="color:#fff;margin:0">Herkesin <span class="serif pink">konuştuğu</span> parçalar</h2><a class="btn light" href="products.html">Hepsini gör →</a></div></div>
+ <div class="hs-track" id="pop-track"></div>
+ <div class="hs-bar"><i></i></div>
+</div></section>
+
+<!-- MANİFESTO -->
+<section class="sec"><div class="wrap"><p class="statement">Pembe bir renkten fazlası. AZRA, cesur olanların, kendi stilini yaratanların ve sınırları sevmeyenlerin markası.</p></div></section>
+
+<!-- SIK SATIN ALINANLAR -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow rv">Sık Satın Alınanlar</span><h2 class="title rv">Müşterilerimizin <span class="serif pink">favorileri</span></h2></div><p class="muted rv" style="max-width:340px">Son 30 günde en çok sepete eklenen ve tekrar satın alınan ürünler.</p></div>
+ <div class="rank" id="rank"></div>
+</div></section>
+
+<div class="band dark"><div class="mq"><span>BLAZER</span><span class="serif pink">✦</span><span>ELBİSE</span><span class="serif pink">✦</span><span>SNEAKER</span><span class="serif pink">✦</span><span>TRENÇKOT</span><span class="serif pink">✦</span><span>BLAZER</span><span class="serif pink">✦</span><span>ELBİSE</span><span class="serif pink">✦</span><span>SNEAKER</span><span class="serif pink">✦</span><span>TRENÇKOT</span><span class="serif pink">✦</span></div></div>
+
+<!-- VİTRİN (sekmeli) -->
+<section class="sec"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow rv">Vitrin</span><h2 class="title rv">Bugün neler <span class="serif pink">var?</span></h2></div>
+  <div class="tabs rv" id="vit-tabs"><button class="tab on" data-k="new">Yeni Gelenler</button><button class="tab" data-k="sale">İndirimdekiler</button><button class="tab" data-k="top">En Yüksek Puanlı</button></div></div>
+ <div class="grid" id="vit"></div>
+</div></section>
+
+<!-- KAMPANYA -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+ <div class="promo rv z"><div class="t"><span class="eyebrow" style="color:#fff">Sınırlı süre</span><h2 style="margin-top:14px">İlk alışverişe<br><span class="serif">%15</span> indirim</h2><p>Üye ol, kodu sepette kullan; sonbaharın en pembe fırsatını kaçırma.</p><div class="code">HOSGELDIN</div><br><a class="btn light" href="login.html">Hemen Üye Ol →</a></div>
+  <div class="v"><div class="circle" data-speed=".1" style="width:340px;height:340px;background:#ff7ab8;right:-60px;top:-60px"></div><div class="circle" data-speed="-.07" style="width:180px;height:180px;background:#0b0b0d;left:10%;bottom:-40px"></div><div id="promo-art" data-speed=".06" data-rot="0" style="position:absolute;inset:0;display:grid;place-items:center"></div></div></div>
+</div></section>
+
+<!-- AVANTAJLAR -->
+<section class="sec" style="padding-top:20px"><div class="wrap"><div class="feats">
+ <div class="feat rv"><div class="e">🚚</div><h4>Ücretsiz Kargo</h4><p>1500₺ ve üzeri tüm siparişlerde.</p></div>
+ <div class="feat rv" style="--d:.08s"><div class="e">↩️</div><h4>30 Gün İade</h4><p>Beğenmezsen koşulsuz iade et.</p></div>
+ <div class="feat rv" style="--d:.16s"><div class="e">🔒</div><h4>Güvenli Ödeme</h4><p>256-bit SSL ve 3D Secure.</p></div>
+ <div class="feat rv" style="--d:.24s"><div class="e">💬</div><h4>7/24 Destek</h4><p>Sorularına anında yanıt.</p></div>
+</div></div></section>
+
+<!-- YORUMLAR -->
+<section class="sec" style="padding-top:20px"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow rv">Yorumlar</span><h2 class="title rv">Onlar <span class="serif pink">ne diyor?</span></h2></div></div>
+ <div class="tst">
+  <div class="tc rv"><span class="stars">★★★★★</span><q>Blazer ceketi gördüğüm anda aşık oldum. Kumaşı ve kalıbı muhteşem, kargo da çok hızlıydı!</q><div class="who"><i>E</i>Elif K.</div></div>
+  <div class="tc rv" style="--d:.1s"><span class="stars">★★★★★</span><q>Bu kadar şık ve uygun fiyatlı bir marka bulmak zor. Üçüncü siparişim, hiç pişman olmadım.</q><div class="who"><i>Z</i>Zeynep A.</div></div>
+  <div class="tc rv" style="--d:.2s"><span class="stars">★★★★★</span><q>İade süreci inanılmaz kolaydı. Müşteri hizmetleri çok ilgili. Pembe elbise favorim oldu!</q><div class="who"><i>M</i>Merve T.</div></div>
+ </div>
+</div></section>
+
+<!-- INSTA -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+ <div class="sec-head"><div><span class="eyebrow rv">@azra.moda</span><h2 class="title rv">Bizi <span class="serif pink">takip et</span></h2></div></div>
+ <div class="insta" id="insta"></div>
+</div></section>
+
+<!-- BÜLTEN -->
+<section class="sec" style="padding-top:0"><div class="wrap"><div class="news rv z">
+ <span class="eyebrow">Bülten</span><h2 style="margin-top:12px">Pembe haberler <span class="serif pink">cebinde</span></h2><p style="color:#aaa;margin-top:12px">Yeni koleksiyonlar ve özel indirimlerden ilk sen haberdar ol.</p>
+ <form id="news-form"><input type="email" placeholder="E-posta adresin" required><button class="btn pinkb">Abone Ol</button></form>
+</div></div></section>
+</main>
+</body>
+</html>
