@@ -3,7 +3,7 @@ const C = {
   pembe:{n:'Toz Gül',h:'#d8a7a7'}, pudra:{n:'Pudra',h:'#efdcd8'}, siyah:{n:'Siyah',h:'#2b2b2e'},
   beyaz:{n:'Kırık Beyaz',h:'#f3efe9'}, gri:{n:'Taş Grisi',h:'#a39e98'}, krem:{n:'Ekru',h:'#e8dfd2'},
   lila:{n:'Lila',h:'#c7b5d6'}, mocha:{n:'Mocha',h:'#8b6b5a'}, adacayi:{n:'Adaçayı',h:'#b5c2a5'},
-  bebekmavi:{n:'Bebek Mavisi',h:'#bbd0e3'}, tereyagi:{n:'Tereyağı',h:'#f0de9e'}
+  bebekmavi:{n:'Bebek Mavisi',h:'#bbd0e3'}, tereyagi:{n:'Tereyağı',h:'#f0de9e'}, vizon:{n:'Vizon',h:'#9b8a80'}
 };
 const CATS = [
   {id:'elbise',name:'Elbise'},{id:'ust',name:'Üst Giyim'},{id:'alt',name:'Alt Giyim'},
@@ -21,7 +21,7 @@ let PRODUCTS = [
   mk(5,'Kapüşonlu Sweatshirt','ust','hoodie',890,null,['gri','bebekmavi'],S,4.8,623,4010,'İçi şardonlu, oversize kalıplı kapüşonlu sweatshirt. Kanguru cepli.'),
   mk(6,'Midi Pileli Etek','alt','skirt',760,990,['pudra','lila'],S,4.5,178,1420,'Hareketli pileli midi etek. Beli lastikli, her bedene uyum sağlar.'),
   mk(7,'Uzun Trençkot','dis','coat',2890,3490,['krem'],S,4.9,267,1330,'Su itici kumaş, kemerli ve çift sıra düğmeli klasik trençkot.'),
-  mk(8,'Chunky Platform Sneaker','ayakkabi','shoe',1790,2190,['beyaz','siyah'],SHOE,4.8,512,2760,'Kalın tabanlı, gün boyu konfor sunan platform sneaker.'),
+  mk(8,'Süet Diz Altı Çizme','ayakkabi','shoe',2490,2990,['vizon'],SHOE,4.8,512,2760,'Yumuşak süet dokulu, diz altı çizme. Kalın topuğu gün boyu konfor sağlar.'),
   mk(9,'Mini Omuz Çantası','aksesuar','bag',950,null,['krem','pembe'],ONE,4.7,388,2980,'Zincir askılı, mıknatıslı kapaklı mini çanta. Telefon ve kartlık için ideal.'),
   mk(10,'Çiçekli Midi Elbise','elbise','dress',1450,null,['beyaz','pudra'],S,4.6,129,870,'Hafif viskon kumaş, V yaka ve belden büzgülü romantik midi elbise.'),
   mk(11,'Oversize Gömlek','ust','shirt',720,null,['beyaz','bebekmavi'],S,4.5,301,1990,'Poplin dokulu, düşük omuzlu oversize gömlek.'),
@@ -40,7 +40,7 @@ let PRODUCTS = [
   mk(24,'Bucket Şapka','aksesuar','hat',380,null,['adacayi'],ONE,4.4,205,1730,'Pamuklu, iki taraflı kullanılabilen bucket şapka.')
 ];
 /* Gerçek ürün fotoğrafları: img/urun/<id 2 hane>-<renk>.webp. Listede olmayan ürün/renk SVG çizimine düşer (örn. 12 Biker Ceket). */
-const PHOTOS = new Set('1-adacayi,1-pembe,2-mocha,2-pudra,3-beyaz,3-lila,4-adacayi,5-bebekmavi,5-gri,6-lila,6-pudra,7-krem,8-beyaz,8-siyah,9-krem,9-pembe,10-beyaz,10-pudra,11-bebekmavi,11-beyaz,12-mocha,12-siyah,13-beyaz,13-gri,14-krem,14-lila,15-lila,16-adacayi,16-krem,17-krem,17-pembe,18-beyaz,18-pudra,19-beyaz,19-tereyagi,20-mocha,20-pembe,21-krem,21-lila,22-gri,22-pembe,23-mocha,23-pudra,24-adacayi'.split(','));
+const PHOTOS = new Set('1-adacayi,1-pembe,2-mocha,2-pudra,3-beyaz,3-lila,4-adacayi,5-bebekmavi,5-gri,6-lila,6-pudra,7-krem,8-vizon,9-krem,9-pembe,10-beyaz,10-pudra,11-bebekmavi,11-beyaz,12-mocha,12-siyah,13-beyaz,13-gri,14-krem,14-lila,15-lila,16-adacayi,16-krem,17-krem,17-pembe,18-beyaz,18-pudra,19-beyaz,19-tereyagi,20-mocha,20-pembe,21-krem,21-lila,22-gri,22-pembe,23-mocha,23-pudra,24-adacayi'.split(','));
 const photoUrl = (id, k) => PHOTOS.has(id + '-' + k) ? `img/urun/${String(id).padStart(2, '0')}-${k}.webp` : null;
 try{
   const extra = JSON.parse(localStorage.getItem('azra_custom')||'[]');

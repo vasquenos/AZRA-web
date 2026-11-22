@@ -168,7 +168,7 @@ function layout() {
    <div><h5>Alışveriş</h5><ul>${cats}</ul></div>
    <div><h5>Yardım</h5><ul><li><a href="order.html">Sipariş Takibi</a></li><li><a href="faq.html">Sıkça Sorulan Sorular</a></li><li><a href="legal.html?doc=iade">İade ve Değişim</a></li><li><a href="legal.html?doc=kargo">Kargo ve Teslimat</a></li><li><a href="contact.html">İletişim</a></li></ul></div>
    <div><h5>Kurumsal</h5><ul><li><a href="about.html">Hakkımızda</a></li><li><a href="legal.html?doc=mesafeli">Mesafeli Satış Sözleşmesi</a></li><li><a href="legal.html?doc=gizlilik">Gizlilik Politikası</a></li><li><a href="legal.html?doc=kvkk">KVKK Aydınlatma Metni</a></li><li><a href="legal.html?doc=cerez">Çerez Politikası</a></li><li><a href="admin.html">Yönetim Paneli</a></li></ul></div>
-  </div><div class="copy"><span>© 2026 AZRA Moda Tic. A.Ş. — Ödev projesi, gerçek satış yapılmamaktadır.</span><span>Pembe ile yapıldı ♥</span></div></div><div class="big-logo">azra.</div></footer>`);
+  </div><div class="copy"><span>© 2026 AZRA Moda Tic. A.Ş. — Ödev projesi, gerçek satış yapılmamaktadır.</span><span>Süet çizme fotoğrafı: Arnel Hasanovic / Unsplash</span></div></div><div class="big-logo">azra.</div></footer>`);
 
   /* olaylar */
   $('#burger').onclick = () => { $('#nav').classList.toggle('open'); };
