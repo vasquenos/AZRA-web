@@ -34,7 +34,10 @@ PAGES.home = () => {
       return `<a class="hv-tile" href="product.html?id=${p.id}" tabindex="-1">${pArt(p, ci)}<span class="hv-tag">${esc(p.name)} · ${fmt(p.price)}</span></a>`; }).join('');
     return `<div class="hv-col c${c}"><div class="hv-set">${tiles}</div><div class="hv-set" aria-hidden="true">${tiles}</div></div>`;
   }).join('');
-  $('#pv-a').innerHTML = pArt(byId(12), 1); $('#pv-b').innerHTML = pArt(byId(17), 0);
+  $('#tk-a').addEventListener('click', () => {
+    try { navigator.clipboard.writeText('HOSGELDIN'); } catch (e) {}
+    toast('Kod kopyalandı: <b>HOSGELDIN</b>');
+  });
   const nf = $('#news-form');
   nf.onsubmit = e => { e.preventDefault(); toast('Bültene kayıt oldun 💖 <b>AZRA10</b> kodun e-postanda!'); nf.reset(); };
 };

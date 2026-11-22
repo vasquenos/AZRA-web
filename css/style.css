@@ -393,14 +393,24 @@ label.l{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.mask>span{transform:none}}
 .rk.in .bar i{width:var(--w)}
 .hs .card .im{box-shadow:0 0 0 1px #2a2a30}
-.promo .v .pv{position:absolute;display:block;overflow:hidden;background:#fff;box-shadow:0 34px 60px -24px rgba(0,0,0,.5);transition:transform .6s var(--ease)}
-.promo .v .pv svg{position:static;width:100%;height:100%;display:block;filter:none}
-.promo .v .pv-a{width:46%;aspect-ratio:3/4;left:10%;top:9%;border-radius:999px 999px 28px 28px}
-.promo .v .pv-b{width:38%;aspect-ratio:3/4;right:7%;bottom:8%;border-radius:26px;border:8px solid #fff;transform:rotate(5deg)}
-.promo .v .pv-a:hover{transform:translateY(-8px)}
-.promo .v .pv-b:hover{transform:rotate(2deg) translateY(-6px)}
-.pv-sticker{position:absolute;right:12%;top:8%;z-index:3;width:116px;height:116px;border-radius:50%;background:#0b0b0d;color:#fff;display:grid;place-content:center;text-align:center;transform:rotate(-12deg);box-shadow:0 18px 34px -14px rgba(0,0,0,.5)}
-.pv-sticker b{font-family:var(--serif,inherit);font-style:italic;font-size:2.1rem;line-height:1;color:#ffb3d6}
-.pv-sticker span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
-@media(max-width:800px){.promo .v{min-height:440px}.pv-sticker{width:92px;height:92px}.pv-sticker b{font-size:1.7rem}}
+/* promo: indirim kuponu */
+.promo .v .tk{position:absolute;border:0;font:inherit;text-align:left}
+.promo .v .tk-a{color:#0b0b0d}.promo .v .tk-b{color:#fff}
+.tk-a{--y:66%;left:50%;top:50%;width:min(62%,340px);aspect-ratio:4/5;margin:calc(min(62vw,340px) * -.625) 0 0 calc(min(62%,340px) * -.5);rotate:-6deg;display:grid;grid-template-rows:var(--y) 1fr;background:#fff;color:#0b0b0d;border-radius:26px;cursor:pointer;z-index:2;box-shadow:0 40px 70px -26px rgba(0,0,0,.55);transition:rotate .5s var(--ease),translate .5s var(--ease),scale .5s var(--ease);
+ -webkit-mask:radial-gradient(circle 15px at 0 var(--y),#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 15px at 100% var(--y),#0000 97%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 15px at 0 var(--y),#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 15px at 100% var(--y),#0000 97%,#000) right/51% 100% no-repeat}
+.tk-a:hover{rotate:-3deg;translate:0 -8px;scale:1.02}
+.tk-top{display:flex;flex-direction:column;justify-content:center;padding:6% 8% 3%;position:relative}
+.tk-top small{font-size:.66rem;font-weight:700;letter-spacing:.2em;color:#8a8a93}
+.tk-big{font-size:clamp(5rem,9vw,8.4rem);font-weight:800;letter-spacing:-.07em;line-height:.9;margin-top:4%;color:var(--pink)}
+.tk-big i{font-size:.55em;font-weight:400;letter-spacing:0;margin-right:.04em;vertical-align:.5em;color:#0b0b0d}
+.tk-top em{font-size:1.15rem;color:#0b0b0d;margin-top:2%}
+.tk-stub{display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;gap:4px 14px;align-items:center;padding:3% 8% 5%;border-top:2px dashed #e6e0e4}
+.tk-code small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.2em;color:#8a8a93}
+.tk-code b{font-size:1.25rem;letter-spacing:.1em}
+.tk-bars{height:38px;width:84px;background:repeating-linear-gradient(90deg,#0b0b0d 0 2px,#0000 2px 4px,#0b0b0d 4px 5px,#0000 5px 9px,#0b0b0d 9px 12px,#0000 12px 14px)}
+.tk-copy{grid-column:1/-1;font-size:.7rem;font-weight:600;color:var(--pink)}
+.tk-b{right:6%;top:50%;width:min(46%,250px);aspect-ratio:3/4;margin-top:calc(min(46vw,250px) * -.66);background:#0b0b0d;color:#fff;border-radius:26px;rotate:9deg;translate:14% 0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;padding:22px 20px;text-align:right}
+.tk-b span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#ffb3d6}
+.tk-b b{font-size:clamp(2.4rem,5vw,4rem);color:#ffb3d6;line-height:.9;writing-mode:vertical-rl;transform:rotate(180deg)}
+@media(max-width:800px){.promo .v{min-height:470px}.tk-a{width:min(70%,300px);margin:-185px 0 0 calc(min(70%,300px) * -.5)}.tk-b{display:none}}
 .mask{padding-bottom:.12em;margin-bottom:-.12em}
