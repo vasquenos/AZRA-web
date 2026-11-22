@@ -27,8 +27,13 @@ PAGES.home = () => {
     return `<a class="cat rv" style="--d:${i * .07}s" href="products.html?cat=${c.id}">${pArt(p, ci, i + 1)}<span>${c.name} →</span></a>`;
   }).join('');
   $('#insta').innerHTML = [0, 5, 9, 14, 2, 17].map((i, k) => `<a href="product.html?id=${PRODUCTS[i].id}" class="rv" style="--d:${k * .06}s">${pArt(PRODUCTS[i], k % PRODUCTS[i].colors.length, k + 2)}</a>`).join('');
-  $('#hv-main').innerHTML = art('dress', '#141417', 0, { bg: '#ff2e93' });
-  $('#hv1').innerHTML = pArt(PRODUCTS[1], 1, 1); $('#hv2').innerHTML = pArt(PRODUCTS[7], 2, 0);
+  /* hero: üç sütunlu, zıt yönde akan fotoğraf şeridi (her sütun kesintisiz döngü için iki kez basılır) */
+  const hvIds = [[1, 12, 17, 23, 5, 9], [2, 7, 14, 21, 10, 19], [3, 13, 16, 22, 11, 6]];
+  $('#hv-cols').innerHTML = hvIds.map((ids, c) => {
+    const tiles = ids.map((id, k) => { const p = byId(id), ci = (c + k) % p.colors.length;
+      return `<a class="hv-tile" href="product.html?id=${p.id}" tabindex="-1">${pArt(p, ci)}<span class="hv-tag">${esc(p.name)} · ${fmt(p.price)}</span></a>`; }).join('');
+    return `<div class="hv-col c${c}"><div class="hv-set">${tiles}</div><div class="hv-set" aria-hidden="true">${tiles}</div></div>`;
+  }).join('');
   $('#promo-art').innerHTML = art('jacket', '#141417', 1, { bg: 'none' });
   const nf = $('#news-form');
   nf.onsubmit = e => { e.preventDefault(); toast('Bültene kayıt oldun 💖 <b>AZRA10</b> kodun e-postanda!'); nf.reset(); };

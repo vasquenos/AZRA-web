@@ -112,19 +112,33 @@ h2.title{font-size:clamp(2rem,5vw,3.8rem);margin:10px 0 0}
 .hero-stats b{display:block;font-size:2rem;letter-spacing:-.04em}.hero-stats span{font-size:.85rem;color:var(--grey)}
 .hero-vis{position:relative;height:min(640px,70vh)}
 .blob{position:absolute;border-radius:50%;filter:blur(2px)}
-.hv-main{position:absolute;inset:6% 12% 0 12%;border-radius:200px 200px 28px 28px;background:var(--pink);overflow:hidden}
-.hv-main svg{width:100%;height:100%}
-.hv-card{position:absolute;width:150px;border-radius:22px;overflow:hidden;box-shadow:0 25px 50px -15px rgba(0,0,0,.35);background:#fff;padding:8px}
-.hv-card .im{border-radius:16px;overflow:hidden;aspect-ratio:3/4}
-.hv-card small{display:block;padding:8px 4px 2px;font-weight:600;font-size:.8rem}
-.hv-1{left:-2%;top:12%}.hv-2{right:-3%;bottom:10%}
+.hv-cols{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;overflow:hidden;border-radius:34px;-webkit-mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 10%,#000 88%,transparent)}
+.hv-col{display:flex;flex-direction:column;animation:hvUp 46s linear infinite;will-change:transform}
+.hv-col.c1{animation-name:hvDown;animation-duration:54s;margin-top:-60px}
+.hv-col.c2{animation-duration:62s;margin-top:-20px}
+.hv-cols:hover .hv-col{animation-play-state:paused}
+.hv-set{display:flex;flex-direction:column;flex:none}
+@keyframes hvUp{to{transform:translateY(-50%)}}
+@keyframes hvDown{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+.hv-tile{position:relative;display:block;flex:none;aspect-ratio:3/4;margin-bottom:14px;border-radius:26px;overflow:hidden;background:var(--soft);box-shadow:0 18px 40px -22px rgba(0,0,0,.45)}
+.hv-set .hv-tile:nth-child(3n+1){border-radius:999px 999px 26px 26px}
+.hv-tile svg{width:100%;height:100%;display:block;transition:transform .8s var(--ease)}
+.hv-tile:hover svg{transform:scale(1.06)}
+.hv-tag{position:absolute;left:10px;right:10px;bottom:10px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.72rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(8px);transition:.35s var(--ease)}
+.hv-tile:hover .hv-tag,.hv-tile:focus-visible .hv-tag{opacity:1;transform:none}
+.hv-chip{position:absolute;left:-2%;bottom:9%;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 20px 12px 14px;border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 20px 40px -18px rgba(0,0,0,.4);transition:transform .4s var(--ease)}
+.hv-chip:hover{transform:translateY(-4px)}
+.hv-chip i{width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 0 rgba(255,46,147,.55);animation:hvPulse 2s infinite}
+.hv-chip b{display:block;font-size:.95rem;letter-spacing:-.01em}.hv-chip small{display:block;font-size:.76rem;color:var(--grey)}
+@keyframes hvPulse{70%{box-shadow:0 0 0 12px rgba(255,46,147,0)}100%{box-shadow:0 0 0 0 rgba(255,46,147,0)}}
+@media(prefers-reduced-motion:reduce){.hv-col{animation:none}}
 .spin{position:absolute;right:2%;top:2%;width:130px;height:130px;animation:rot 18s linear infinite}
 .spin text{font-size:11.5px;font-weight:700;letter-spacing:.22em;fill:var(--ink)}
 @keyframes rot{to{transform:rotate(360deg)}}
 .spinwrap{position:absolute;right:0;top:0;width:130px;height:130px;display:grid;place-items:center;background:#fff;border-radius:50%;box-shadow:0 10px 30px rgba(0,0,0,.12)}
 .spinwrap::after{content:"♥";position:absolute;color:var(--pink);font-size:1.7rem}
 .bgword{position:absolute;left:-1%;bottom:-3vw;font-size:22vw;font-weight:800;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1.5px var(--soft);white-space:nowrap;pointer-events:none;z-index:-1;line-height:1}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;min-height:0}.hero-vis{height:480px}.hv-card{width:110px}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;min-height:0}.hero-vis{height:480px}.hv-chip{left:8px;bottom:12px}.spinwrap{width:96px;height:96px;right:6px}.spin{width:96px;height:96px}}
 
 /* marquee band */
 .band{background:var(--pink);color:#fff;overflow:hidden;padding:18px 0;transform:rotate(-1.4deg);margin:20px -20px;white-space:nowrap}
