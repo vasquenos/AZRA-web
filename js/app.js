@@ -47,10 +47,11 @@ function art(type, hex, seed = 0, o = {}) {
 }
 /* Fotoğraf varsa SVG içinde <image> olarak verir (mevcut CSS/JS svg'ye göre çalıştığı için bozulmaz); yoksa çizim. */
 function pArt(p, ci = 0, seed, o = {}) {
-  const url = photoUrl(p.id, p.colors[ci].k);
-  if (!url) return art(p.type, p.colors[ci].h, seed ?? p.id, o);
+  const col = p.colors[ci] || p.colors[0];
+  const url = photoUrl(p.id, col.k);
+  if (!url) return art(p.type, col.h, seed ?? p.id, o);
   const vb = o.zoom ? '180 160 726 968' : '0 0 1086 1448';
-  return `<svg viewBox="${vb}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(p.name)} - ${esc(p.colors[ci].n)}"><image href="${url}" width="1086" height="1448" preserveAspectRatio="xMidYMid slice"/></svg>`;
+  return `<svg viewBox="${vb}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(p.name)} - ${esc(col.n)}"><image href="${url}" width="1086" height="1448" preserveAspectRatio="xMidYMid slice"/></svg>`;
 }
 const hasPhoto = (p, ci = 0) => !!photoUrl(p.id, p.colors[ci].k);
 
