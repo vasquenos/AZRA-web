@@ -34,7 +34,7 @@ PAGES.home = () => {
       return `<a class="hv-tile" href="product.html?id=${p.id}" tabindex="-1">${pArt(p, ci)}<span class="hv-tag">${esc(p.name)} · ${fmt(p.price)}</span></a>`; }).join('');
     return `<div class="hv-col c${c}"><div class="hv-set">${tiles}</div><div class="hv-set" aria-hidden="true">${tiles}</div></div>`;
   }).join('');
-  $('#promo-art').innerHTML = art('jacket', '#141417', 1, { bg: 'none' });
+  $('#pv-a').innerHTML = pArt(byId(12), 1); $('#pv-b').innerHTML = pArt(byId(17), 0);
   const nf = $('#news-form');
   nf.onsubmit = e => { e.preventDefault(); toast('Bültene kayıt oldun 💖 <b>AZRA10</b> kodun e-postanda!'); nf.reset(); };
 };
