@@ -107,10 +107,10 @@ function card(p, opt = {}) {
   const fav = getFavs().includes(p.id), sale = p.old ? Math.round((1 - p.price / p.old) * 100) : 0;
   const isNew = p.id >= 19 || p.id === 1;
   return `<article class="card ${opt.cls || ''} rv" style="--d:${(opt.i || 0) % 4 * .08}s">
-  <a class="im" href="product.html?id=${p.id}">${pArt(p, 0)}
+  <div class="imw"><a class="im" href="product.html?id=${p.id}">${pArt(p, 0)}
    ${sale ? `<span class="badge sale">-%${sale}</span>` : isNew ? '<span class="badge">YENİ</span>' : ''}</a>
   <button class="fav ${fav ? 'on' : ''}" data-fav="${p.id}" aria-label="Favori">${heart}</button>
-  <button class="quick" data-quick="${p.id}">Hızlı Ekle +</button>
+  <button class="quick" data-quick="${p.id}">Hızlı Ekle +</button></div>
   <div class="info"><h3><a href="product.html?id=${p.id}">${esc(p.name)}</a></h3>
    <div class="meta"><span class="price">${fmt(p.price)}${p.old ? `<s>${fmt(p.old)}</s>` : ''}</span>
    <span class="dots">${p.colors.map(c => `<i style="background:${c.h}" title="${c.n}"></i>`).join('')}</span></div>

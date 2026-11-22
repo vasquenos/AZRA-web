@@ -154,9 +154,10 @@ h2.title{font-size:clamp(2rem,5vw,3.8rem);margin:10px 0 0}
 .card .fav:hover{transform:scale(1.15)}
 .fav svg{width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:2}
 .fav.on svg{fill:var(--pink);stroke:var(--pink)}
-.card .quick{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:999px;padding:12px;font-weight:600;font-size:.9rem;transform:translateY(130%);transition:transform .5s var(--ease)}
-.card:hover .quick{transform:none}.card .quick:hover{background:var(--pink);color:#fff}
-@media(hover:none){.card .quick{transform:none;padding:9px;font-size:.8rem}}
+.card .imw{position:relative;overflow:hidden;border-radius:var(--r)}
+.card .quick{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:999px;padding:12px;font-weight:600;font-size:.9rem;transform:translateY(130%);opacity:0;transition:transform .5s var(--ease),opacity .3s}
+.card:hover .quick{transform:none;opacity:1}.card .quick:hover{background:var(--pink);color:#fff}
+@media(hover:none){.card .quick{transform:none;opacity:1;padding:9px;font-size:.8rem}}
 .card .info{padding:14px 4px 0}
 .card h3{font-size:1rem;font-weight:600;letter-spacing:-.01em;line-height:1.25}
 .card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:6px;gap:8px}
